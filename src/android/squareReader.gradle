@@ -1,5 +1,5 @@
-def SQUARE_READER_SDK_APPLICATION_ID = "sq0idp-sdizR-ELDDJq7cBSk-NUoA"
-def SQUARE_READER_SDK_REPOSITORY_PASSWORD = "3yxhovyikonqqvypazggy7atw63miy45b6rlktdmlfcmuycrp6bq"
+def SQUARE_READER_SDK_APPLICATION_ID = ""
+def SQUARE_READER_SDK_REPOSITORY_PASSWORD = ""
 apply plugin: 'com.android.application'
 
 android {
