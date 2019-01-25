@@ -2,7 +2,7 @@ import SquareReaderSDK
 import CoreLocation
 import AVKit
 
-@objc(MoltinCordovaSquareReader) class MoltinCordovaSquareReader : CDVPlugin, SQRDCheckoutControllerDelegate, SQRDReaderSettingsControllerDelegate, CLLocationManagerDelegate {
+@objc(SquareReader) class SquareReader : CDVPlugin, SQRDCheckoutControllerDelegate, SQRDReaderSettingsControllerDelegate, CLLocationManagerDelegate {
     
     private lazy var locationManager = CLLocationManager()
     private var currentCommand: CDVInvokedUrlCommand?

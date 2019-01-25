@@ -3,18 +3,33 @@
     xmlns="http://apache.org/cordova/ns/plugins/1.0" 
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <name>MoltinCordovaSquareReader</name>
+    <name>SquareReader</name>
 
     <dependency id="cordova-plugin-add-swift-support" version="1.7.2"/>
 
-    <js-module name="MoltinCordovaSquareReader" src="www/MoltinCordovaSquareReader.js">
-        <clobbers target="MoltinCordovaSquareReader" />
+    <js-module name="SquareReader" src="www/SquareReader.js">
+        <clobbers target="SquareReader" />
     </js-module>
-
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SquareReader">
+                <param name="android-package" value="org.apache.cordova.plugin.SquareReader"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+            <uses-permission android:name="android.permission.BLUETOOTH" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />            
+        </config-file>
+        <framework src="src/android/squareReader.gradle" custom="true" type="gradleReference" />
+        <source-file src="src/android/SquareReader.java" target-dir="src/org/apache/cordova/plugin" />
+    </platform>
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="MoltinCordovaSquareReader">
-                <param name="ios-package" value="MoltinCordovaSquareReader" />
+            <feature name="SquareReader">
+                <param name="ios-package" value="SquareReader" />
             </feature>
         </config-file>
 
@@ -46,7 +61,7 @@
           </array>
         </config-file>
         
-        <source-file src="src/ios/MoltinCordovaSquareReader.swift" />
+        <source-file src="src/ios/SquareReader.swift" />
     </platform>
     
 </plugin>

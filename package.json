@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "Cordova Plugin to interface with the Square Reader SDK",
   "cordova": {
-    "id": "moltin-cordova-plugin-square-reader",
+    "id": "cordova-plugin-square-reader",
     "platforms": [
       "android",
       "ios"
